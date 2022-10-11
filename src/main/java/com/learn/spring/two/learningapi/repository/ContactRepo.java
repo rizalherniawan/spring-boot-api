@@ -11,10 +11,7 @@ import com.learn.spring.two.learningapi.pojo.Contact;
 @Repository
 public class ContactRepo {
     
-    private List<Contact> contactList = Arrays.asList(
-        new Contact("Ayu", "099818"),
-        new Contact("Niborru", "08881929")
-    );
+    private List<Contact> contactList = new ArrayList<>();
 
     public Contact getContactById(int index) {
         return this.contactList.get(index);
@@ -30,5 +27,9 @@ public class ContactRepo {
 
     public List<Contact> getListContacts() {
         return this.contactList;
+    }
+
+    public void deleteContact(int index) {
+        this.contactList.remove(index);
     }
 }

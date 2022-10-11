@@ -5,14 +5,7 @@ import java.util.UUID;
 public class Contact {
     private String name;
     private String phoneNumber;
-    private String id;
-
-    public Contact(String name, String phoneNumber) {
-        this.name = name;
-        this.phoneNumber = phoneNumber;
-        this.id = UUID.randomUUID().toString();
-    }
-
+    private String id = UUID.randomUUID().toString();
 
     public String getName() {
         return this.name;
@@ -34,11 +27,16 @@ public class Contact {
         return this.id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "{" +
             " name='" + getName() + "'" +
             ", phoneNumber='" + getPhoneNumber() + "'" +
+            ", id='" + this.getId() + "'" +
             "}";
     }
 

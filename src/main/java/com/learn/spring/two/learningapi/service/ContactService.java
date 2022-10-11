@@ -10,7 +10,13 @@ public interface ContactService {
 
     public void addContact(Contact contact);
 
-    public void updateContact(int index, Contact contact);
+    public int updateContact(String id, Contact contact);
 
     public List<Contact> getListContacts();
+
+    public Contact getContactByIdObj(String id);
+
+    public int findIndex(String id);
+
+    public int deleteContact(String id);
 }
